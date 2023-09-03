@@ -1,0 +1,25 @@
+cas_no,name_substance,,total_g,class_substance,location,,descrip,,molecular_weight,,molecular_formula
+3375-31-3,palladium acetate,,15,inorganic,"Sector A, first shelf",,solid,,224.51,,C4H6O4Pd
+96-15-1,(2-methylbutyl)amine,,50,amine,"Sector B, first shelf",,"liquid, bp 94-97 °C , density 0.738 g/mL",,87.16,,C5H13N
+76639-93-5,tetrabromomethane,,23,amine,"Sector B, first shelf",,solid,,331.63,,CBr4
+10017-11-5,2-propen-1-amine hydrochloride,,30,amine,"Sector B, first shelf",,solid,,93.56,,C3H8ClN
+71-43-2,benzene,,1000,arene,"Sector B, second shelf",,"liquid, bp 80°C , density 0.8765 g/mL",,78.114,,C6H6
+67-66-3,chloroform,,5000,halogen derivat.,"Sector A, first shelf",,"liquid, bp 61.15°C , density 1.489 g/mL",,119.38,,CHCl3
+108-88-3,toluene,,200,arene,"Sector B, second shelf",,"liquid, bp 110.60°C , density 0.519 g/mL",,92.141,,C7H8
+95-47-6,o-xylene,,120,arene,"Sector B, second shelf",,"liquid, bp 144.4°C , density 0.88 g/mL",,106.168,,C8H10
+106-42-3,p-xylene,,240,arene,"Sector B, second shelf",,"liquid, bp 138.35°C , density 0.861 g/mL",,106.168,,C8H10
+5433-01-02,1-bromo-3-isopropylbenzene,,80,arene,"Sector B, second shelf",,solid,,199.09,,C8H10
+7681-65-4,copper iodide,,50,inorganic,"Sector A, first shelf",,solid,,190.45,,CuI
+558-17-8,2-iodo-2-methylpropane,,40,alkane,"Sector A, first shelf",,"liquid, bp 99-100°C , density 1.544 g/mL",,184.02,,C4H9I
+338949-42-1,lithium-2-methyl-2-propanide,,1000,alkane,"Sector A, first shelf",,"liquid, 1.6 M in heptane under Argon, density 0.69 g/mL at 20 °C",,64.06,,C4H9Li
+5470-11-1,hydroxylamine hydrochloride,,50,amine,"Sector B, first shelf",,solid,,69.49,,H4ClNO
+121-44-8,triethylamine,,100,amine,"Sector B, first shelf",,"liquid, bp 88.6-89.8°C , density 0.7255 g/mL",,101.19,,C6H15N
+1493-13-6,trifluoromethanesulfonic acid,,200,acid,"Sector A, second shelf",,"liquid, bp 162°C , density 1.696 g/mL",,150.07,,CHF3O3S
+0140-10-3,сinnamic acid,,500,acid,"Sector A, second shelf",,solid,,148.161,,C9H8O2
+7757-82-6,sodium sulfate,,1000,inorganic,"Sector A, first shelf",,solid,,142.04,,Na2O4S
+10043-52-4,calcium chlorid,,400,inorganic,"Sector A, first shelf",,solid,,110.98,,CaCl2
+109-73-9,butylamine,,300,amine,"Sector B, first shelf",,"liquid, bp 77- 79°C , density 0.74 g/mL",,73.139,,C4H11N
+76-05-1,trifluoroacetic acid,,200,acid,"Sector A, second shelf",,"liquid, bp 72.4 °C , density 1.489  g/mL",,114.02,,C2HF3O2
+98-00-0,furfuryl alcohol,,300,alcohol,"Sector A, second shelf",,"liquid, bp 	170 °C , density 1.128  g/mL",,98.10,,C5H6O2
+527-72-0,thiophene-2-carboxylic acid,,200,acid,"Sector A, second shelf",,solid,,128.15 ,,C5H4O2S
+7446-70-0,aluminium chloride,,1000,inorganic,"Sector A, first shelf",,solid,,133.341,,AlCl3
