@@ -3,22 +3,34 @@ import csv
 
 DATABASE_NAME = 'reagent_stocktaking.db'
 
-def create_table():
+# если не существует, создает новую таблицу с демо-данными
+def create_table_if_not_exists():
     conn = sqlite3.connect(DATABASE_NAME)
     cursor = conn.cursor()
+    # проверка на существование таблицы. Если не существует импортируем, если существует скипаем
+    cursor.execute(''' SELECT count(name) FROM sqlite_master WHERE type='table' AND name='reagent' ''')
+    if cursor.fetchone() [0]==0 : 
+        cursor.execute('''
+            CREATE TABLE reagent (
+                cas_no TEXT PRIMARY KEY,
+                name_substance TEXT NOT NULL,
+                total_g FLOAT NOT NULL,
+                class_substance TEXT NOT NULL,
+                location TEXT NOT NULL,
+                descrip TEXT NOT NULL,
+                molecular_weight FLOAT NOT NULL,
+                molecular_formula TEXT NOT NULL       
+            )
+        ''')
+        with open('table.csv', 'r') as csv_file:
+            csv_reader = csv.DictReader(csv_file)
+            for row in csv_reader:
+                print(row)
+                cursor.execute('''
+                    INSERT or IGNORE INTO reagent (cas_no, name_substance, total_g, class_substance, location, descrip, molecular_weight, molecular_formula)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                ''', (row['cas_no'], row['name_substance'], row['total_g'], row['class_substance'], row['location'], row['descrip'], row['molecular_weight'], row['molecular_formula'],))
 
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS reagent (
-            cas_no TEXT PRIMARY KEY,
-            name_substance TEXT NOT NULL,
-            total_g FLOAT NOT NULL,
-            class_substance TEXT NOT NULL,
-            location TEXT NOT NULL,
-            descrip TEXT NOT NULL,
-            molecular_weight FLOAT NOT NULL,
-            molecular_formula TEXT NOT NULL       
-        )
-    ''')
 
     conn.commit()
     conn.close()
@@ -34,22 +46,6 @@ def upload_sql(obj):
     conn.commit()
     conn.close()
 
-
-def import_csv_data():
-    conn = sqlite3.connect(DATABASE_NAME)
-    cursor = conn.cursor()
-
-    with open('table.csv', 'r') as csv_file:
-        csv_reader = csv.DictReader(csv_file)
-        for row in csv_reader:
-            print(row)
-            cursor.execute('''
-                INSERT or IGNORE INTO reagent (cas_no, name_substance, total_g, class_substance, location, descrip, molecular_weight, molecular_formula)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-            ''', (row['cas_no'], row['name_substance'], row['total_g'], row['class_substance'], row['location'], row['descrip'], row['molecular_weight'], row['molecular_formula'],))
-
-    conn.commit()
-    conn.close()
 
 
 # функция запрос. Вывести реагент из таблицы , с таким то ключом

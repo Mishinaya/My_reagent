@@ -5,8 +5,7 @@ import json
 
 app = Flask(__name__)
 
-create_table()
-import_csv_data()
+create_table_if_not_exists()
 
 # SEARCH
 
@@ -52,6 +51,10 @@ def update_mass():
 def delete_by_key(cas_no):
     delete_record_by_key_sql(cas_no)
     return jsonify({'message': 'Record deleted successfully'})
+
+
+if __name__ == '__main__':
+    app.run()
 
 
     
